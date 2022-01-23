@@ -1,0 +1,14 @@
+<header th:insert="blogs/header :: header"></header>
+<h1  th:text="${title}" ></h1>
+
+    <div class="form1" th:each="el : ${posts}">
+        <h3 th:text="${el.title}"></h3>
+        <p th:text="${el.full_text}"></p>
+        <p>Просмотры <span th:text="${el.views}"></span></p>
+        <a th:href="'/blog/' + ${el.id} + '/edit'">редактировать</a>
+        <form th:action="'/edit' + ${el.id} + '/remove'" method="post">
+            <button type="submit">удалить</button>
+        </form>
+    </div>
+
+<div th:insert="blogs/footer :: footer"></div>

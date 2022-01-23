@@ -1,0 +1,155 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    background-image: url(../images/ane.jpg);
+    -moz-background-size: cover; /* Firefox 3.6+ */
+    -webkit-background-size: cover; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: cover; /* Opera 9.6+ */
+    background-size: cover; /* Современные браузеры */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+footer {
+    font-weight: bold;
+    border: 6px inset #DAA520;
+    background: #DAA520;
+    width: 100%;
+    display: table;
+}
+footer p {
+    display: table-cell;
+    color: #000000;
+    padding: 15px 15px;
+    font-size: 20px;
+}
+footer p:hover {
+    background: #FFFF00;
+    color:#000000;
+    transform: scale(1.1,1.1);
+    transition: all 0.3s linear;
+}
+.blok1 {
+    /* border: толщина_рамки вид_рамки цвет_рамки; */
+    float: left;
+    border: 6px inset #DAA520;
+    padding: 10px;
+    background: #DAA520;
+    color: #000000;
+    width: 150px;
+    height: 350px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-left: 50px;
+}
+.blok1:hover {
+    transform: scale(1.3,1.3);
+    transition: all 1s linear;
+}
+.form1 {
+    float: left;
+    padding: 10px;
+    border: 6px inset #DAA520;
+    background: #DAA520;
+    margin-left: 50px;
+    width: 250px;
+    height: 350px;
+    margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 800px) {
+    .blok1 {
+        margin-left: 50px;
+    }
+}
+
+
+
+h1 {
+    margin-top: 100px;
+    text-align: center;
+    color: gold;
+}
+/****************************** MENU **********************************************/
+
+.menu {
+    border: 6px inset #DAA520;
+    margin-top: 10px;
+    box-shadow: 0 2px 2px rgba(255, 255, 0, 0.4);
+    width: 100%;
+    font-weight: bold;
+    display: table;
+    position:fixed;
+    top:0; left:0;
+    z-index: 1000;
+}
+
+
+.menu ul {
+    display: table-row;
+}
+.menu li {
+    display: table-cell;
+    font-size: 20px;
+    position: relative;
+    /*opacity: 0.8;*/
+    background: #DAA520;
+}
+.menu li a {
+    display: block;
+    padding: 15px 15px;
+    color: #000000;
+    text-align: center;
+}
+.menu-caret:after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: 3px solid;
+    border-right: 3px solid transparent;
+    border-bottom: 0;
+    border-left: 3px solid transparent;
+}
+.menu ul li:hover, .menu a:hover {
+    background: #FFFF00;
+    transform: scale(1.1,1.1);
+    transition: all 0.3s linear;
+    color:#000000;
+}
+.menu li:hover ul  {
+    display: block;
+    transform: scale(1.1,1.1);
+    transition: all 0.3s linear;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    color:#000000;
+    background: #FFFF00;
+    margin: 0;
+    padding: 10px 20px;
+    width: 150px;
+    z-index: 9999;
+}
+.menu ul ul  {
+    display: none;
+}
+.menu ul ul li  {
+    display: block;
+    color:#000000;
+    background: #DAA520;
+    padding: 5px 0;
+}
+.menu ul ul li a  {
+    display: block;
+    padding: 0;
+    color:#000000;
+    background: #DAA520;
+    text-align: left;
+}
+
+
+/**********************************************************************************/

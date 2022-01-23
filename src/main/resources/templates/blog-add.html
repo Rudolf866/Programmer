@@ -1,0 +1,18 @@
+<header th:insert="blogs/header :: header"></header>
+<h1  th:text="${title}" ></h1>
+<form class="form1" action="/blog/add" method="post">
+    <div>
+        <label for="">Введите название статьи</label>
+        <input type="text" name="title" >
+    </div>
+    <div>
+        <label for="">Введите анонс статьи</label>
+        <input type="text" name="anons" >
+    </div>
+    <div>
+        <label for="">Введите полный текст статьи</label>
+        <textarea name="full_text" rows="4"></textarea>
+    </div>
+    <button type="submit">Добавить статью</button>
+</form>
+<div th:insert="blogs/footer :: footer"></div>

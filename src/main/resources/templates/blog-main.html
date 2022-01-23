@@ -1,0 +1,11 @@
+<header th:insert="blogs/header :: header"></header>
+
+<h1 th:text="${title}"></h1>
+<div class="form1" th:each="el : ${post}">
+    <h3 th:text="${el.title}"></h3>
+    <p th:text="${el.anons}"></p>
+    <a th:href="'/blog/' + ${el.id}">детальнее</a>
+</div>
+
+
+<div th:insert="blogs/footer :: footer"></div>

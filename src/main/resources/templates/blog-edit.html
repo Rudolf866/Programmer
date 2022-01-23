@@ -1,0 +1,21 @@
+
+<header th:insert="blogs/header :: header"></header>
+<h1>редактировать статью</h1>
+<div class="form1" th:each="el : ${posts}">
+    <form   method="post">
+        <div>
+            <label for="">Введите название статьи</label>
+            <input type="text" th:value="${el.title}" name="title" >
+        </div>
+        <div>
+            <label for="">Введите анонс статьи</label>
+            <input type="text" th:value="${el.anons}"  name="anons" >
+        </div>
+        <div>
+            <label for="">Введите полный текст статьи</label>
+            <textarea name="full_text" rows="4"></textarea>
+        </div>
+        <button type="submit">редактировать статью</button>
+    </form>
+</div>
+<div th:insert="blogs/footer :: footer"></div>
