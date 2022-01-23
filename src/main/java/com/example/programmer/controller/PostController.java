@@ -10,8 +10,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Optional;
 
 @Controller
@@ -29,6 +33,19 @@ public class PostController {
         return "blog";
 
     }
+    @GetMapping("/books")
+    public String booksController(Model model) {
+        model.addAttribute("title", "Страница с книгами");
+        model.addAttribute("name", "Books for programming");
+        return "books";
+
+    }
+    @GetMapping("/smert")
+    public String smertController(Model model) {
+        model.addAttribute("title", "Страница о нас");
+        return "smert";
+    }
+
 
     @GetMapping("/about")
     public String aboutController(Model model) {
